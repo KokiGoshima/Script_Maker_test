@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    ScriptMakerの説明するよ！
                 </div>
             </div>
         </div>
