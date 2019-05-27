@@ -19,6 +19,8 @@ Route::get('/', 'HomeController@index');
 
 Route::group(["middleware" => "auth"], function(){
 
+	Route::get("scripts/", "ScriptsController@index"); //ファイル一覧画面
+	
 	Route::post("scripts/create", "ScriptsController@store"); //新規作成処理
 
 	Route::get("scripts/{param}/edit", "ScriptsController@edit"); //編集画面
@@ -27,7 +29,7 @@ Route::group(["middleware" => "auth"], function(){
 
 	Route::get("scripts/sample", "ScriptsController@showSample"); //サンプル画面
 
-	Route::delete("diary/{param}/delete", 'DiariesController@destroy');
+	Route::delete("diary/{param}/delete", 'ScriptsController@destroy');
 
 });
 
